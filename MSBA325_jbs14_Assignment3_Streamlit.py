@@ -40,26 +40,26 @@ if genre=='Data Description':
     
     """
 
-data = pd.read_csv('hotel_bookings.csv')    
+#data = pd.read_csv('hotel_bookings.csv')
+def load_data(nrows):
+    data = pd.read_csv('hotel_bookings.csv', nrows=nrows)
+    lowercase = lambda x: str(x).lower()
+    data.rename(lowercase, axis='columns', inplace=True)
+    return data
+
+# Create a text element and let the reader know the data is loading.
+data_load_state = st.text('Loading data...')
+
+# Load 10,000 rows of data into the dataframe.
+data = load_data(10000)  
+
+# Notify the reader that the data was successfully loaded.
+data_load_state.text("Done loading the data, please click on the below check box to see it!")
+
 if genre=='Data Visualizations':    
     
        #Adding a title
        st.title('Hotel Booking Cancelations')
-       #Importing the data
-       def load_data(nrows):
-           data = pd.read_csv('hotel_bookings.csv', nrows=nrows)
-           lowercase = lambda x: str(x).lower()
-           data.rename(lowercase, axis='columns', inplace=True)
-           return data
-
-       # Create a text element and let the reader know the data is loading.
-       data_load_state = st.text('Loading data...')
-
-       # Load 10,000 rows of data into the dataframe.
-       data = load_data(10000)
-
-       # Notify the reader that the data was successfully loaded.
-       data_load_state.text("Done loading the data, please click on the below check box to see it!")
 
        #you can see the data through a check box
        if st.checkbox('Show raw data'):
