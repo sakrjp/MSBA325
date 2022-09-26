@@ -39,14 +39,7 @@ if genre=='Data Description':
     visualizations that are in the next slide.
     
     """
-    st.markdown("""
-                > ##  I used the following type of visualizations:
-                - Pie Chart to show the repartition of Hotel Booking Cancelations (1) and Confirmations (0).
-                - Box Plot using a select box to show whether there is a correlation / relationship between lead time and adr with the
-                  target variable.
-                - 
-                
-                """) 
+
     
 if genre=='Data Visualizations':    
     
