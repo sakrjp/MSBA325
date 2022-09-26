@@ -20,7 +20,7 @@ if genre=='Data Description':
     
     Course     :MSBA 325 - Data Visualization
     
-    Instructor :Dr. Krzysztof Fleszar
+    Instructor :Dr. Fouad Zablith
     
     Due Date   :Tuesday, September 27, 2022, at 18:00     
     """
