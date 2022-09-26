@@ -40,7 +40,7 @@ if genre=='Data Description':
     
     """
 
-    
+data = pd.read_csv('hotel_bookings.csv')    
 if genre=='Data Visualizations':    
     
        #Adding a title
